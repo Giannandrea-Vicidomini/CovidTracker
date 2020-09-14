@@ -1,9 +1,7 @@
 import requests;
-import json
 
 
-
-class QueryManager:
+class CovidData:
     def __init__(self,os):
         self.os = os
         self.__nation = requests.get(os.environ.get("NATION")).json()
