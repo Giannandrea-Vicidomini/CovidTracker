@@ -33,11 +33,11 @@ regex = "^[cC][eE][nN][cC][iI][oO]$"
 
 @bot.message_handler(commands=["start"])
 def start_message(message):
-    bot.send_message(message.chat.id,"Hi there, choose the region you want to see the data of by typing /regions")
+    bot.send_message(message.chat.id,"Ciao! Scegli la regione di cui vuoi visualizzare i dati scrivendo /regions")
 
 @bot.message_handler(commands=["regions"])
 def show_keyboard(message):
-    bot.send_message(message.chat.id,"Choose a region:",reply_markup = markup)
+    bot.send_message(message.chat.id,"Scegli una regione:",reply_markup = markup)
 
 
 @bot.message_handler(func=lambda message: True if message.text in regions else False)
